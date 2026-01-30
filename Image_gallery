@@ -1,0 +1,39 @@
+# Image gallery sample
+
+{
+	"type": "AdaptiveCard",
+	"body": [
+		{
+			"type": "TextBlock",
+			"text": "The latest from Bing",
+			"wrap": true,
+			"style": "heading"
+		},
+		{
+			"type": "TextBlock",
+			"text": "Take a look at the image of the day, plus the last two days.",
+			"wrap": true
+		},
+		{
+			"type": "ImageSet",
+			"imageSize": "medium",
+			"images": [
+				{
+					"$data": "${images}",
+					"type": "Image",
+					"url": "${url}",
+					"altText": "${altText}"
+				}
+			]
+		}
+	],
+	"actions": [
+		{
+			"type": "Action.OpenUrl",
+			"title": "View More",
+			"url": "http://bing.com"
+		}
+	],
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"version": "1.5"
+}
